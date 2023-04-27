@@ -16,7 +16,7 @@ class MunicipiosSeeder extends Seeder
     public function run()
     {
         Municipios::insert([
-            'id' => 1,
+            'id_municipio' => 1,
             'nombre_mpio' => 'Pitalito',
             'departamento' => 'Huila'
         ]);
