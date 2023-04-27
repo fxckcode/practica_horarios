@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('municipios', function (Blueprint $table) {
-            $table->increments('id_municipio')->unsigned(false);
-            $table->string('nombre_mpio');
-            $table->string('departamento');
-            $table->timestamps();
+        Schema::table('personas', function (Blueprint $table) {
+            $table->foreign('fk_municipio')->references('id_municipio')->on('municipios')->unsigned(false);
         });
     }
 
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('municipios');
+        //
     }
 };
