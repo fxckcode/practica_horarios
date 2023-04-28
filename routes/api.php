@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AmbientesController;
+use App\Http\Controllers\PersonasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ use App\Http\Controllers\AmbientesController;
 // });
 
 Route::apiResource('ambientes', AmbientesController::class);
+Route::apiResource('personas', PersonasController::class);
